@@ -153,6 +153,7 @@ export interface SiteSettings {
       originalFilename?: string;
     };
   };
+  resumeUrl?: string;
   availabilityText?: string;
   techGroups?: {
     title: string;
