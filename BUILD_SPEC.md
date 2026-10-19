@@ -249,14 +249,14 @@ Share a single `KNOWLEDGE_LEVELS` constant (label, colour) used by cards, legend
 - Add `README.md`: setup, env vars, how to add a project and a note in the Studio, how to wire the webhook, how to deploy to Vercel.
 
 ## 13. Acceptance checklist (verify before finishing)
-- [ ] No left sidebar on any page; the same sticky header with page links, GitHub/LinkedIn/Email icon buttons and Resume button appears on every page.
+- [x] No left sidebar on any page; the same sticky header with page links, GitHub/LinkedIn/Email icon buttons and Resume button appears on every page.
 - [ ] Loader shows once per session with the rotating 3D cube, real progress, and skips for reduced motion.
 - [ ] Role chips filter the grid and sync with `?role=`; search works; counts update.
 - [ ] Each card shows the pop-out visual, knowledge pill, description and tech chips; hover motion works.
 - [ ] Project detail pages render all sections (overview, knowledge check with bars, tech stack with "why", architecture diagram, screenshots + lightbox, live demo iframe, video, run-locally block, decisions, next project).
 - [ ] About renders stack groups and the timeline from CMS data; Notes list and article pages work with code highlighting.
 - [x] Everything editable from `/studio`; seed script populates all of it; revalidation works.
-- [ ] Mobile layout works at 360px with the bottom nav bar.
+- [x] Mobile layout works at 360px with the bottom nav bar.
 - [ ] `tsc --noEmit`, lint and `next build` pass with zero errors.
 
 ## 14. Build order
