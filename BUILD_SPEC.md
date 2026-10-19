@@ -255,7 +255,7 @@ Share a single `KNOWLEDGE_LEVELS` constant (label, colour) used by cards, legend
 - [ ] Each card shows the pop-out visual, knowledge pill, description and tech chips; hover motion works.
 - [ ] Project detail pages render all sections (overview, knowledge check with bars, tech stack with "why", architecture diagram, screenshots + lightbox, live demo iframe, video, run-locally block, decisions, next project).
 - [ ] About renders stack groups and the timeline from CMS data; Notes list and article pages work with code highlighting.
-- [ ] Everything editable from `/studio`; seed script populates all of it; revalidation works.
+- [x] Everything editable from `/studio`; seed script populates all of it; revalidation works.
 - [ ] Mobile layout works at 360px with the bottom nav bar.
 - [ ] `tsc --noEmit`, lint and `next build` pass with zero errors.
 
