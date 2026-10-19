@@ -257,7 +257,7 @@ Share a single `KNOWLEDGE_LEVELS` constant (label, colour) used by cards, legend
 - [x] About renders stack groups and the timeline from CMS data; Notes list and article pages work with code highlighting.
 - [x] Everything editable from `/studio`; seed script populates all of it; revalidation works.
 - [x] Mobile layout works at 360px with the bottom nav bar.
-- [ ] `tsc --noEmit`, lint and `next build` pass with zero errors.
+- [x] `tsc --noEmit`, lint and `next build` pass with zero errors.
 
 ## 14. Build order
 1. Scaffold Next.js + TypeScript + Tailwind; set tokens, fonts, global styles.

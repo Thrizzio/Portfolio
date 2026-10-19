@@ -17,6 +17,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: "Aadi — CS Undergrad Building AI-Powered Products",
   description:
     "Personal portfolio of Aadi: CS undergrad building AI/LLM products with honest knowledge checks and role filters.",
