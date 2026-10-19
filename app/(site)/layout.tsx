@@ -2,6 +2,7 @@ import React from "react";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/ui/Footer";
 import { MobileNav } from "@/components/header/MobileNav";
+import { Loader } from "@/components/loader/Loader";
 import { sanityFetch } from "@/lib/sanity/client";
 import { siteSettingsQuery } from "@/lib/sanity/queries";
 import type { SiteSettings } from "@/lib/sanity/types";
@@ -23,6 +24,7 @@ export default async function SiteLayout({
 
   return (
     <>
+      <Loader />
       <Header siteSettings={siteSettings} />
       <main className="flex-1 pb-20 md:pb-0">{children}</main>
       <Footer
