@@ -17,7 +17,6 @@ import { NextProjectBand } from "@/components/project/NextProjectBand";
 import type { Project } from "@/lib/sanity/types";
 
 
-export const instant = false;
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
