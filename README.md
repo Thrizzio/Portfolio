@@ -144,3 +144,19 @@ npm run start
    - `SANITY_REVALIDATE_SECRET`
    - `NEXT_PUBLIC_SITE_URL` (set to your Vercel deployment URL)
 4. Deploy! Next.js will build all pages with static generation and incremental on-demand revalidation.
+
+
+
+cd "C:\DEV WORK\Physioget"
+.\.venv\Scripts\uvicorn services.research_api.app:app --host 127.0.0.1 --port 8000 --reload
+
+
+cd "C:\DEV WORK\Physioget"
+.\.venv\Scripts\uvicorn services.ingestion_service.app:app --host 127.0.0.1 --port 8001 --reload
+
+
+cd "C:\DEV WORK\Physioget"
+.\.venv\Scripts\python.exe -m http.server 8080 --directory web/research
+
+cd "C:\DEV WORK\Physioget"
+.\.venv\Scripts\python.exe -m http.server 8081 --directory web/admin

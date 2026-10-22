@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 
 const emptySubscribe = () => () => {};
 
@@ -23,13 +23,14 @@ function getServerSnapshot(): boolean {
 export function useSessionOnce() {
   const shouldShow = useSyncExternalStore(emptySubscribe, getSnapshot, getServerSnapshot);
 
-  const markShown = () => {
+  const markShown = useCallback(() => {
     try {
       sessionStorage.setItem("aadi_portfolio_loaded", "true");
     } catch {
-      // ignore
+      // Ignore storage errors
     }
-  };
+  }, []);
 
   return { shouldShow, markShown };
 }
+

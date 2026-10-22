@@ -70,35 +70,7 @@ export function CubeCSS() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes cubeSpin {
-          0% {
-            transform: rotateX(20deg) rotateY(0deg);
-          }
-          50% {
-            transform: rotateX(-25deg) rotateY(180deg) rotateZ(10deg);
-          }
-          100% {
-            transform: rotateX(20deg) rotateY(360deg);
-          }
-        }
-        @keyframes spinSlow {
-          0% {
-            transform: rotateX(75deg) rotateY(20deg) rotateZ(0deg);
-          }
-          100% {
-            transform: rotateX(75deg) rotateY(20deg) rotateZ(360deg);
-          }
-        }
-        @keyframes spinReverse {
-          0% {
-            transform: rotateX(65deg) rotateY(-30deg) rotateZ(360deg);
-          }
-          100% {
-            transform: rotateX(65deg) rotateY(-30deg) rotateZ(0deg);
-          }
-        }
-      `}</style>
     </div>
   );
 }
+

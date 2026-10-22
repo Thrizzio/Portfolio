@@ -41,6 +41,7 @@ export function Loader({ forceShow }: { forceShow?: boolean } = {}) {
     // Run progress timer for ~1.6s
     const startTime = performance.now();
     const duration = 1600;
+    let fadeTimeout: ReturnType<typeof setTimeout> | null = null;
 
     const interval = setInterval(() => {
       const elapsed = performance.now() - startTime;
@@ -52,13 +53,18 @@ export function Loader({ forceShow }: { forceShow?: boolean } = {}) {
         markShown();
         // Start fade out
         setIsFadingOut(true);
-        setTimeout(() => {
+        fadeTimeout = setTimeout(() => {
           setIsMounted(false);
         }, 350);
       }
     }, 25);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      if (fadeTimeout) {
+        clearTimeout(fadeTimeout);
+      }
+    };
   }, [shouldShow, isDebug, markShown]);
 
   if (!isDebug && (!shouldShow || !isMounted)) {
